@@ -1,4 +1,4 @@
-package com.sr7d.miniproject1;
+package com.sr7d.ToDoAssistance;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

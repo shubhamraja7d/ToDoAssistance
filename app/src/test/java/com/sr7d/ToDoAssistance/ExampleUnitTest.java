@@ -1,4 +1,4 @@
-package com.sr7d.miniproject1;
+package com.sr7d.ToDoAssistance;
 
 import org.junit.Test;
 

@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.sr7d.miniproject1"
+        applicationId "com.sr7d.todoassistance"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1

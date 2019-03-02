@@ -1,4 +1,4 @@
-package com.sr7d.miniproject1;
+package com.sr7d.ToDoAssistance;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -8,10 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ToDoViewHolder> {
     Context context;
-    public ToDoAdapter(Context context) {
+    List<ToDo> todos;
+    public ToDoAdapter(Context context, List<ToDo> todos) {
         this.context = context;
+        this.todos = todos;
     }
 
     @NonNull
@@ -23,14 +27,14 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ToDoViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ToDoViewHolder toDoViewHolder, int i) {
-        toDoViewHolder.textViewTodoTitle.setText("New ToDo");
-        toDoViewHolder.textViewToDoDate.setText("23-Feb-2019");
+        toDoViewHolder.textViewTodoTitle.setText(todos.get(i).getTitle());
+        toDoViewHolder.textViewToDoDate.setText(todos.get(i).getDate());
 
     }
 
     @Override
     public int getItemCount() {
-        return 1;
+        return todos.size();
     }
 
     public class ToDoViewHolder extends RecyclerView.ViewHolder {
